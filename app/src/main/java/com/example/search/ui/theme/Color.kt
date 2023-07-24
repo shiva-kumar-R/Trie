@@ -14,6 +14,7 @@ val Teal500 = Color(0xFF008080)
 val White200 = Color(0xFFF0F0F0)
 val White100 = Color(0xFFF5F5F5)
 
+val Black200 = Color(0xFFE7E7E8)
 val Black700 = Color(0xFF646464)
 val Black800 = Color(0xFF222222)
 val Black900 = Color(0xFF0D0D0D)

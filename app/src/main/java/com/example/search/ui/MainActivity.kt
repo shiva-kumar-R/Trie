@@ -11,7 +11,9 @@ import androidx.navigation.compose.rememberNavController
 import com.example.search.ui.screens.SearchDirectory
 import com.example.search.ui.theme.SearchTheme
 import com.example.search.viewmodel.SearchDirectoryViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
