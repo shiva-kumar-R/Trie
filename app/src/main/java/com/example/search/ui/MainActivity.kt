@@ -9,8 +9,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.search.ui.screens.SearchDirectory
+import com.example.search.ui.screens.SearchScreen
 import com.example.search.ui.theme.SearchTheme
 import com.example.search.viewmodel.SearchDirectoryViewModel
+import com.example.search.viewmodel.SearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,6 +35,13 @@ fun SearchApp() {
         composable(route = "destination_search_directory") {
             val viewModel: SearchDirectoryViewModel = hiltViewModel()
             SearchDirectory(viewModel) {
+                navController.navigate(route = "destination_search")
+            }
+        }
+
+        composable(route = "destination_search") {
+            val viewModel: SearchViewModel = hiltViewModel()
+            SearchScreen(viewModel) {
 
             }
         }
