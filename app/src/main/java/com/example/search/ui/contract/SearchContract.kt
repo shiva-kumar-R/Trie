@@ -14,7 +14,7 @@ interface SearchContract {
 
         data class LoadSearchResults(val details: List<CountriesItem>): SearchViewState()
 
-        data class NoSearchResults(val constraint: String): SearchViewState()
+        data class NoSearchResults(val constraint: String?): SearchViewState()
     }
 
     sealed class SearchEvent: Event {
@@ -22,6 +22,6 @@ interface SearchContract {
     }
 
     sealed class SearchIntention: Intention {
-        data class SearchCountriesIntention(val constraint: String) : SearchIntention()
+        data class SearchCountriesIntention(val constraint: String?) : SearchIntention()
     }
 }
